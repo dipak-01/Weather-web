@@ -13,7 +13,7 @@ export default function SearchBox({ updateWeatherInfo }) {
     let [city, setCity] = useState("");
     let [err, setErr] = useState(false);
     const API_URL = "https://api.openweathermap.org/data/2.5/weather"
-    const API_KEY = `{process.env.REACT_APP_WEATHER_API_KEY}`
+    const API_KEY = import.meta.env.VITE_APP_WEATHER_API_KEY;
 
 
 
@@ -92,7 +92,7 @@ export default function SearchBox({ updateWeatherInfo }) {
                         <IconButton onClick={handleSubmit} aria-label="delete" size="large">
                             <SearchIcon />
                         </IconButton></div>
-<ToggleColorMode/>
+                    <ToggleColorMode />
 
                 </div>
 
